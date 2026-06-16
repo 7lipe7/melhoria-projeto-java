@@ -1,0 +1,15 @@
+src/one/digitalinnovation/gof/Test.java
+src/one/digitalinnovation/gof/facade/Cliente.java
+src/one/digitalinnovation/gof/facade/Facade.java
+src/one/digitalinnovation/gof/facade/InvalidCepException.java
+src/one/digitalinnovation/gof/singleton/SingletonEager.java
+src/one/digitalinnovation/gof/singleton/SingletonLazy.java
+src/one/digitalinnovation/gof/singleton/SingletonLazyHolder.java
+src/one/digitalinnovation/gof/strategy/Comportamento.java
+src/one/digitalinnovation/gof/strategy/ComportamentoAgressivo.java
+src/one/digitalinnovation/gof/strategy/ComportamentoDefensivo.java
+src/one/digitalinnovation/gof/strategy/ComportamentoNormal.java
+src/one/digitalinnovation/gof/strategy/Robo.java
+src/one/digitalinnovation/gof/strategy/RoboFactory.java
+src/subsistema1/crm/CrmService.java
+src/subsistema2/cep/CepApi.java

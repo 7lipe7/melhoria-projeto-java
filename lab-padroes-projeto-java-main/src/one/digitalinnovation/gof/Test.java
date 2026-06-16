@@ -26,13 +26,25 @@ public class Test {
 		lazyHolder = SingletonLazyHolder.getInstancia();
 		System.out.println(lazyHolder);
 
-		// Strategy
-		Robo roboNormal = RoboFactory.criarRobo("normal");
-		roboNormal.mover();
-		roboNormal.mover();
+		// Strategy (demonstração + movimentação via usuário)
+		Robo robo = RoboFactory.criarRobo("normal");
+		System.out.println("=== Movimentação do robô (console) ===");
+		System.out.println("Comandos: w/a/s/d ou frente/esquerda/trás/direita | sair para encerrar");
 
-		Robo roboDefensivo = RoboFactory.criarRobo("defensivo");
-		roboDefensivo.mover();
+		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		while (true) {
+			System.out.print("> ");
+			String comando = scanner.nextLine();
+			if (comando == null) {
+				continue;
+			}
+			if (comando.trim().equalsIgnoreCase("sair")) {
+				break;
+			}
+
+			robo.comando(comando);
+			System.out.println("Posição: (" + robo.getX() + ", " + robo.getY() + ") | Direção: " + robo.getDirecao());
+		}
 
 		// Facade
 		Facade facade = new Facade();
